@@ -4,6 +4,7 @@ import { siteConfig } from "@/config/site.config";
 import { buttonVariants } from "@/components/ui/Button";
 import { Mail, MapPin } from "lucide-react";
 import { cn } from "@/lib/utils";
+import CompanyWebsiteButton from "@/components/CompanyWebsiteButton";
 
 export default function Home() {
   return (
@@ -51,6 +52,18 @@ export default function Home() {
               </a>
             </div>
           </div>
+          <CompanyWebsiteButton
+            name="LinkedIn"
+            logo="linkedin-logo.png"
+            link="https://www.linkedin.com/in/adam-jankowski-034a0116a/"
+            text="If you want to lift yourself up, lift up someone else."
+          />
+          <CompanyWebsiteButton
+            name="GitHub"
+            logo="github-logo.png"
+            link="https://github.com/Adam15-byte"
+            text="First, solve the problem. Then, write the code."
+          />
           {/* Footer */}
           <div className="pt-2 border-t border-neutral-200 dark:border-neutral-800 text-xs flex items-center justify-between">
             <p className="text-neutral-500">©2023 All Rights Reserved.</p>
