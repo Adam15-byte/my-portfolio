@@ -5,12 +5,14 @@ import { buttonVariants } from "@/components/ui/Button";
 import { Mail, MapPin } from "lucide-react";
 import { cn } from "@/lib/utils";
 import CompanyWebsiteButton from "@/components/CompanyWebsiteButton";
+import Footer from "@/components/Footer";
+import RightSide from "@/components/right-side/RightSide";
 
 export default function Home() {
   return (
-    <main className="flex gap-10 w-full h-full flex-1">
+    <main className="flex gap-10 w-full flex-col md:flex-row">
       {/* Left Side */}
-      <div className="flex-1 h-full w-full p-6 max-w-md">
+      <div className="flex-1 h-full p-6 w-full md:max-w-md">
         <div className="h-full w-full p-6 rounded-md flex flex-col space-y-6 ">
           {/* Avatar */}
           <Avatar className="w-[120px] h-[120px]">
@@ -25,9 +27,7 @@ export default function Home() {
             {/* Full Name */}
             <h1 className="text-4xl font-bold mt-2">{siteConfig.creator}</h1>
             {/* Bio */}
-            <p className="text-2xl font-light text-neutral-500">
-              {siteConfig.bio}
-            </p>
+            <p className="text-2xl font-light opacity-60">{siteConfig.bio}</p>
           </div>
           {/* Buttons */}
           <div className="flex justify-between gap-2">
@@ -65,17 +65,12 @@ export default function Home() {
             text="First, solve the problem. Then, write the code."
           />
           {/* Footer */}
-          <div className="pt-2 border-t border-neutral-200 dark:border-neutral-800 text-xs flex items-center justify-between">
-            <p className="text-neutral-500">©2023 All Rights Reserved.</p>
-            <ThemeToggle />
-          </div>
+          <Footer additionalStyles="hidden md:flex" />
         </div>
       </div>
       {/* Right Side */}
-      <div className="flex-1 h-full p-6">
-        <div className="p-6 h-full rounded-md flex items-center justify-center">
-          Right side
-        </div>
+      <div className="flex-1 h-full p-6 max-w-7xl mx-auto">
+        <RightSide />
       </div>
     </main>
   );
