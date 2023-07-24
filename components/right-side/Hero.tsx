@@ -1,30 +1,32 @@
 "use client";
 
-import React from "react";
+import { Environment } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { Environment, Center } from "@react-three/drei";
-import Model from "./Model";
-import Backdrop from "./Backdrop";
 import CameraRig from "./CameraRig";
+import Model from "./Model";
 
 const Hero = () => {
   return (
-    <div className="h-full w-full">
-      <Canvas
-        shadows
-        camera={{ position: [0, 0, 0], fov: 25 }}
-        gl={{ preserveDrawingBuffer: true }}
-        className="w-full max-w-full h-full transition-all ease-in"
-      >
-        <ambientLight intensity={0.5} />
-        <Environment preset="city" />
-        <CameraRig>
-          <Backdrop />
-          <Center>
+    <div className="h-full w-full relative">
+      <div className="h-full w-full">
+        <Canvas
+          shadows
+          camera={{ fov: 130 }}
+          className="w-full max-w-full h-full transition-all ease-in"
+        >
+          <ambientLight intensity={0.5} />
+          <spotLight position={[10, 10, 10]} angle={0.3} />
+          <Environment preset="city" />
+          <CameraRig>
             <Model />
-          </Center>
-        </CameraRig>
-      </Canvas>
+          </CameraRig>
+        </Canvas>
+      </div>
+      <div className="w-full text-center space-x-5 text-lg font-bold text-slate-300 absolute top-[70%] left-0">
+        <span>one</span>
+        <span>two</span>
+        <span>three</span>
+      </div>
     </div>
   );
 };

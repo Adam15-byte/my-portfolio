@@ -1,22 +1,21 @@
-import React, { ReactNode, useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import { easing } from "maath";
-import { useSnapshot } from "valtio";
-import { state } from "./Model";
+import { useRef } from "react";
 
 const CameraRig = ({ children }) => {
   const group = useRef();
-  const snap = useSnapshot(state);
 
   // model rotation
   useFrame((state, delta) => {
-    const isBreakpoint = window.innerWidth <= 1260;
     const isMobile = window.innerWidth < 600;
+    const isMid = window.innerWidth < 1200;
     // initial position
-    let targetPosition = [-0.4, 0, 10];
+    let targetPosition = [0, 0, 5];
 
     if (isMobile) {
-      targetPosition = [0, 0, 3];
+      targetPosition = [0, 0, 8];
+    } else if (isMid) {
+      targetPosition = [0, 0, 6];
     } else {
       targetPosition = [0, 0, 4];
     }
@@ -26,8 +25,8 @@ const CameraRig = ({ children }) => {
 
     easing.dampE(
       group.current.rotation,
-      [state.pointer.y / 10, -state.pointer.x / 5, 0],
-      0.25,
+      [state.pointer.y / 2, -state.pointer.x / 2, 0],
+      0.5,
       delta
     );
   });

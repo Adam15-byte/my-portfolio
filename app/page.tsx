@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <main className="flex gap-10 w-full flex-col md:flex-row">
       {/* Left Side */}
-      <div className="flex-1 h-full p-6 w-full md:max-w-md">
+      <div className="flex-1 h-full p-6 w-full md:max-w-md md:sticky top-0">
         <div className="h-full w-full p-6 rounded-md flex flex-col space-y-6 ">
           {/* Avatar */}
           <Avatar className="w-[120px] h-[120px]">
