@@ -1,18 +1,17 @@
-import ThemeToggle from "@/components/ThemeToggle";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar";
-import { siteConfig } from "@/config/site.config";
-import { buttonVariants } from "@/components/ui/Button";
-import { Mail, MapPin } from "lucide-react";
-import { cn } from "@/lib/utils";
 import CompanyWebsiteButton from "@/components/CompanyWebsiteButton";
 import Footer from "@/components/Footer";
 import RightSide from "@/components/right-side/RightSide";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar";
+import { buttonVariants } from "@/components/ui/Button";
+import { siteConfig } from "@/config/site.config";
+import { cn } from "@/lib/utils";
+import { Mail, MapPin } from "lucide-react";
 
 export default function Home() {
   return (
-    <main className="flex gap-10 w-full flex-col md:flex-row">
+    <main className="flex gap-10 w-full flex-col h-[100vh] md:flex-row">
       {/* Left Side */}
-      <div className="flex-1 h-full p-6 w-full md:max-w-md md:sticky top-0">
+      <div className="flex-1 h-full p-6 w-full md:max-w-md">
         <div className="h-full w-full p-6 rounded-md flex flex-col space-y-6 ">
           {/* Avatar */}
           <Avatar className="w-[120px] h-[120px]">
@@ -69,7 +68,7 @@ export default function Home() {
         </div>
       </div>
       {/* Right Side */}
-      <div className="flex-1 h-full p-6 max-w-7xl mx-auto">
+      <div className="flex-1 h-full w-full p-6 max-w-7xl mx-auto md:overflow-y-scroll flex flex-col">
         <RightSide />
       </div>
     </main>

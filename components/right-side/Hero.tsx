@@ -11,7 +11,7 @@ const Hero = () => {
       <div className="h-full w-full">
         <Canvas
           shadows
-          camera={{ fov: 130 }}
+          camera={{ fov: 140 }}
           className="w-full max-w-full h-full transition-all ease-in"
         >
           <ambientLight intensity={0.5} />
