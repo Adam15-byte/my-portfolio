@@ -68,7 +68,7 @@ export default function Home() {
         </div>
       </div>
       {/* Right Side */}
-      <div className="flex-1 h-full w-full p-6 max-w-7xl mx-auto md:overflow-y-scroll flex flex-col">
+      <div className="mx-auto w-full h-full overflow-y-hidden">
         <RightSide />
       </div>
     </main>
