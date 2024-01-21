@@ -68,7 +68,7 @@ export default function Home() {
         </div>
       </div>
       {/* Right Side */}
-      <div className="mx-auto w-full h-full overflow-y-hidden">
+      <div className="mx-auto w-full h-full overflow-visible md:overflow-y-hidden">
         <RightSide />
       </div>
     </main>

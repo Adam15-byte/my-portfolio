@@ -23,6 +23,13 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/right-side/Model.jsx", "components/right-side/CameraRig.jsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "components/right-side/hero/Model.jsx",
+    "components/right-side/hero/CameraRig.jsx"
+  ],
   "exclude": ["node_modules"]
 }

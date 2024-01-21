@@ -3,6 +3,7 @@ import React, { FC } from "react";
 import { motion } from "framer-motion";
 import { IPreviousJob } from "@/types/IPreviousJob";
 import dayjs from "dayjs";
+import { isNamedExportBindings } from "typescript";
 
 const ExperienceCard: FC<IPreviousJob> = ({
   jobTitle,
@@ -33,8 +34,9 @@ const ExperienceCard: FC<IPreviousJob> = ({
         <h4 className="text-4xl font-light">{jobTitle}</h4>
         <p className="font-bold text-2xl mt-1">{place}</p>
         <div className="flex gap-3 my-2">
-          {stack.map((tech) => (
+          {stack.map((tech, index) => (
             <Image
+              key={index}
               width={30}
               height={30}
               alt={tech}
@@ -46,8 +48,8 @@ const ExperienceCard: FC<IPreviousJob> = ({
           {start} - {isCurrentlyEmployed ? "Currently" : end}
         </p>
         <ul className="list-disc space-y-4 ml-5 text-lg">
-          {responsibilites.map((responsibility) => (
-            <li>{responsibility}</li>
+          {responsibilites.map((responsibility, index) => (
+            <li key={`${responsibility}-${index}`}>{responsibility}</li>
           ))}
         </ul>
       </div>

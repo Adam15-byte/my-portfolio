@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import ExperienceCard from "./ExperienceCard";
-import { previousJobs } from "@/config/experience";
+import { previousJobs } from "@/config/experience.config";
 const Experience = () => {
   return (
     <motion.div
@@ -18,7 +18,7 @@ const Experience = () => {
 
       <div className="flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory">
         {previousJobs.map((job) => (
-          <ExperienceCard {...job} />
+          <ExperienceCard key={job.id} {...job} />
         ))}
       </div>
     </motion.div>
