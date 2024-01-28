@@ -5,6 +5,7 @@ import { useTheme } from "next-themes";
 
 const ThemeToggle = () => {
   const { setTheme, theme } = useTheme();
+  console.log("theme:", theme);
   return (
     <button
       className="relative p-2 inline-flex bg-slate-950 dark:bg-slate-50 rounded-sm"

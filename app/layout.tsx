@@ -12,16 +12,20 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   title: "Adam Jankowski",
-  description: "Professional web development",
+  description: "Frontend development",
 };
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" className="h-full">
       <body className={roboto.className}>
         <CustomThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="dark"
+          themes={["light", "dark"]}
         >
           <div className="flex flex-col h-full">{children}</div>
         </CustomThemeProvider>

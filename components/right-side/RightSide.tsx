@@ -1,7 +1,9 @@
 import React, { FC } from "react";
 import Hero from "./hero/Hero";
-import Experience from "./hero/Experience";
+import Experience from "./experience/Experience";
 import About from "./about/About";
+import AnimatedBackground from "./about/AnimatedBackground";
+import Skills from "./skills/Skills";
 
 const RightSide: FC = () => {
   return (
@@ -11,18 +13,20 @@ const RightSide: FC = () => {
       </section>
       <section id="about" className="snap-center w-full h-full">
         <div className="min-h-screen w-full flex justify-center items-center relative">
-          <div className="dots-background h-full w-full" />
-          <div className="arrows-background h-full w-full" />
-          <div className="stairs-background h-full w-full" />
-          <div className="dots-open-background h-full w-full" />
+          <AnimatedBackground />
           <About />
+        </div>
+      </section>
+      <section id="skills" className="snap-center w-full">
+        <div className="min-h-screen w-full flex justify-center items-center relative">
+          <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl left-1/2 -translate-x-1/2 text-center">
+            Skills
+          </h3>
+          <Skills />
         </div>
       </section>
       <section id="experience" className="snap-center w-full">
         <Experience />
-      </section>
-      <section id="skills" className="snap-center w-full">
-        <div className="min-h-screen w-full">skills</div>
       </section>
       <section id="projects" className="snap-center w-full">
         <div className="min-h-screen w-full">projects</div>

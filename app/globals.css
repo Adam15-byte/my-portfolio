@@ -136,17 +136,17 @@
 
 .chonky-underline-1 {
   &:before {
-    background-color: red;
+    background-color: rgb(97, 120, 241);
   }
 }
 .chonky-underline-2 {
   &:before {
-    background-color: blue;
+    background-color: rgb(97, 120, 241);
   }
 }
 .chonky-underline-3 {
   &:before {
-    background-color: green;
+    background-color: rgb(97, 120, 241);
   }
 }
 
@@ -154,14 +154,14 @@
   background: url('/dots.svg') no-repeat;
   background-position: calc(90%) calc(90%);
   position: absolute;
-  z-index: -1;
+  z-index: 10;
 }
 
 .arrows-background {
   background: url('/arrows.svg') no-repeat;
   background-position: calc(20%) calc(20%);
   position: absolute;
-  z-index: -1;
+  z-index: 10;
 }
 
 .stairs-background {
