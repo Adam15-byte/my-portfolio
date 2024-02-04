@@ -40,7 +40,7 @@ const Skills = () => {
     >
       {Object.entries(SkillsConfig).map(([key, src], index) => {
         const distance = calculateDistance(skillRefs.current[index]);
-        const opacity = 1 - distance / 500;
+        const opacity = 1 - distance / 200;
 
         return (
           <TooltipProvider key={`${index}-${key}`}>

@@ -134,17 +134,7 @@
   }
 }
 
-.chonky-underline-1 {
-  &:before {
-    background-color: rgb(97, 120, 241);
-  }
-}
-.chonky-underline-2 {
-  &:before {
-    background-color: rgb(97, 120, 241);
-  }
-}
-.chonky-underline-3 {
+.chonky-underline {
   &:before {
     background-color: rgb(97, 120, 241);
   }

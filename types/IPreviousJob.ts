@@ -2,7 +2,8 @@ export interface IPreviousJob {
   id: string;
   jobTitle: string;
   place: string;
-  placeLogo: string;
+  placeLogoBlack: string;
+  placeLogoWhite: string;
   stack: string[];
   startDate: Date;
   endDate: Date;

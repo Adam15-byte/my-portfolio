@@ -4,6 +4,9 @@ import Experience from "./experience/Experience";
 import About from "./about/About";
 import AnimatedBackground from "./about/AnimatedBackground";
 import Skills from "./skills/Skills";
+import TimelineTest from "./experience/TimelineMD";
+import TimelineMD from "./experience/TimelineMD";
+import TimelineSM from "./experience/TimelineSM";
 
 const RightSide: FC = () => {
   return (
@@ -26,10 +29,22 @@ const RightSide: FC = () => {
         </div>
       </section>
       <section id="experience" className="snap-center w-full">
-        <Experience />
+        <div className="min-h-screen w-full flex justify-center items-center relative">
+          <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl left-1/2 -translate-x-1/2 text-center">
+            Experience
+          </h3>
+          <TimelineMD />
+          <TimelineSM />
+        </div>
       </section>
       <section id="projects" className="snap-center w-full">
-        <div className="min-h-screen w-full">projects</div>
+        <div className="min-h-screen w-full flex justify-center items-center relative">
+          <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl left-1/2 -translate-x-1/2 text-center">
+            Projects
+          </h3>
+          <TimelineMD />
+          <TimelineSM />
+        </div>
       </section>
       <section id="contact-me" className="snap-center w-full">
         <div className="min-h-screen w-full">contact me</div>
