@@ -75,7 +75,7 @@ const ProjectsMD = () => {
                   className="group p-4 min-h-[600px] w-full flex-1 hover:flex-2 border-2 hover:border-4 flex justify-center items-end bg-cover bg-center bg-no-repeat rounded-md transition-all duration-500"
                 >
                   <div className="group-hover:w-full transition-all duration-500 px-6 py-4 bg-black bg-opacity-40 group-hover:bg-opacity-90 rounded-xl flex flex-col gap-2">
-                    <h3 className="text-xl xl:text-2xl text-left font-bold tracking-wide lg:tracking-wider text-white">
+                    <h3 className="text-base break-all group-hover:text-xl xl:group-hover:text-2xl xl:text-xl text-left font-bold tracking-wide lg:tracking-wider text-white">
                       {project.name}
                     </h3>
                     <div className="gap-2 my-2 hidden group-hover:flex flex-wrap">
@@ -109,7 +109,7 @@ const ProjectsMD = () => {
                       )}
                       {project.address && (
                         <Link
-                          href={project.github}
+                          href={project.address}
                           className="p-1 bg-white bg-opacity-20 rounded-lg items-center justify-center cursor-pointer hidden group-hover:flex"
                         >
                           <ExternalLink size={32} />

@@ -9,7 +9,7 @@ export const aboutConfig = [
     underlineStyle: "chonky-underline",
   },
   {
-    title: "Fullstack Web Developer",
+    title: "Frontend Web Developer",
     description:
       "I specialize in crafting the frontend of web applications, utilizing TypeScript alongside popular frameworks such as React. My expertise extends to seamlessly integrating backend solutions into projects, particularly through Next.js with Prisma. With a focus on robust frontend development and seamless backend integration, I'm equipped to bring your digital visions to life.",
     icon: <Code size={40} strokeWidth={2.5} />,

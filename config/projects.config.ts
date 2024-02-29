@@ -17,10 +17,10 @@ export const projects = [
   },
   {
     bgImage: "/projects/portfolioPage.png",
-    name: "AdamDev.pl",
+    name: "AdamJankowski.dev",
     isPublished: true,
-    address: "https://paulatrenuje.pl",
-    github: "https://github.com/Adam15-byte/paulatrenuje",
+    address: "https://adamjankowski.dev",
+    github: "https://github.com/Adam15-byte/my-portfolio",
     stack: ["typescript", "nextjs", "tailwind", "framer-motion", "dayjs"],
   },
   {

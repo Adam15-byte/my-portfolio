@@ -110,7 +110,7 @@ const ProjectsSM = () => {
                       )}
                       {project.address && (
                         <Link
-                          href={project.github}
+                          href={project.address}
                           className="p-1 bg-white bg-opacity-20 rounded-lg items-center justify-center cursor-pointer hidden group-hover:flex"
                         >
                           <ExternalLink size={32} />
