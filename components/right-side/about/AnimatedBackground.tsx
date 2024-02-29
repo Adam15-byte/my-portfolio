@@ -20,7 +20,7 @@ const codeTextFull = `const WritePage: FC<WritePageProps> = ({ isActive }) => {
 const AnimatedBackground = () => {
   const { theme } = useTheme();
   return (
-    <div className="absolute bottom-10 2xl:bottom-1/4 2xl:translate-y-1/2 left-1/2 -translate-x-1/2 hidden xl:block z-10">
+    <div className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden xl:block z-10">
       <CodeBlock
         language={"jsx"}
         text={codeTextFull}

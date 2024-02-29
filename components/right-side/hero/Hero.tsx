@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <div className="h-screen w-full relative flex justify-center items-center overflow-hidden">
+    <div className="h-full w-full relative flex justify-center items-center overflow-hidden">
       <BackgroundCircles />
       <div className="h-full w-full">
         <Canvas

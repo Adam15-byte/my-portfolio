@@ -3,10 +3,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 grid-rows-3 md:grid-rows-1 z-50">
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl left-1/2 -translate-x-1/2 text-center">
-        About me
-      </h3>
+    <div className="h-fit grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 grid-rows-3 md:grid-rows-1 z-50">
       {aboutConfig.map((item) => (
         <div
           key={item.title}

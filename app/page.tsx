@@ -15,7 +15,7 @@ export default function Home() {
         <div className="h-full w-full p-6 rounded-md flex flex-col space-y-6 ">
           {/* Avatar */}
           <Avatar className="w-[120px] h-[120px]">
-            <AvatarImage src="/favicon.ico" />
+            <AvatarImage src="/avatar.jpeg" />
             <AvatarFallback>AJ</AvatarFallback>
           </Avatar>
           <div>
@@ -33,7 +33,10 @@ export default function Home() {
             {/* Location button */}
             <div className="w-full">
               <a
-                className={cn(buttonVariants({ variant: "outline" }), "w-full")}
+                className={cn(
+                  buttonVariants({ variant: "outline" }),
+                  "w-full py-2 text-sm"
+                )}
                 href={siteConfig.locationLink}
               >
                 <MapPin className="mr-2" />
@@ -43,7 +46,10 @@ export default function Home() {
             {/* Email button */}
             <div className="w-full">
               <a
-                className={cn(buttonVariants({ variant: "outline" }), "w-full")}
+                className={cn(
+                  buttonVariants({ variant: "outline" }),
+                  "w-full py-2 text-sm"
+                )}
                 href={`mailto:${siteConfig.email}`}
               >
                 <Mail size="18" className="mr-2 block group-hover:hidden" />

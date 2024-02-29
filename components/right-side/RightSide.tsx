@@ -1,54 +1,47 @@
-import React, { FC } from "react";
-import Hero from "./hero/Hero";
-import Experience from "./experience/Experience";
+import { FC } from "react";
+import Footer from "../Footer";
+import SectionTitleContainer from "./SectionTitleContainer";
 import About from "./about/About";
-import AnimatedBackground from "./about/AnimatedBackground";
-import Skills from "./skills/Skills";
-import TimelineTest from "./experience/TimelineMD";
 import TimelineMD from "./experience/TimelineMD";
 import TimelineSM from "./experience/TimelineSM";
+import Hero from "./hero/Hero";
+import ProjectsMD from "./projects/ProjectsMD";
+import ProjectsSM from "./projects/ProjectsSM";
+import Skills from "./skills/Skills";
 
 const RightSide: FC = () => {
   return (
     <div className="p-6 h-full w-full flex flex-col mx-auto overflow-y-visible md:overflow-y-scroll md:snap-y snap-mandatory">
-      <section id="hero" className="min-min-h-screen snap-center w-full">
+      <section
+        id="hero"
+        className="min-h-[600px] md:min-h-screen h-full snap-center w-full"
+      >
         <Hero />
       </section>
-      <section id="about" className="snap-center w-full h-full">
-        <div className="min-h-screen w-full flex justify-center items-center relative">
-          <AnimatedBackground />
+      <section id="about" className="snap-center w-full">
+        <SectionTitleContainer title="About me">
+          {/* <AnimatedBackground /> */}
           <About />
-        </div>
+        </SectionTitleContainer>
       </section>
       <section id="skills" className="snap-center w-full">
-        <div className="min-h-screen w-full flex justify-center items-center relative">
-          <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl left-1/2 -translate-x-1/2 text-center">
-            Skills
-          </h3>
+        <SectionTitleContainer title="Skills">
           <Skills />
-        </div>
+        </SectionTitleContainer>
       </section>
       <section id="experience" className="snap-center w-full">
-        <div className="min-h-screen w-full flex justify-center items-center relative">
-          <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl left-1/2 -translate-x-1/2 text-center">
-            Experience
-          </h3>
+        <SectionTitleContainer title="Experience">
           <TimelineMD />
           <TimelineSM />
-        </div>
+        </SectionTitleContainer>
       </section>
       <section id="projects" className="snap-center w-full">
-        <div className="min-h-screen w-full flex justify-center items-center relative">
-          <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl left-1/2 -translate-x-1/2 text-center">
-            Projects
-          </h3>
-          <TimelineMD />
-          <TimelineSM />
-        </div>
+        <SectionTitleContainer title="Projects">
+          <ProjectsMD />
+          <ProjectsSM />
+        </SectionTitleContainer>
       </section>
-      <section id="contact-me" className="snap-center w-full">
-        <div className="min-h-screen w-full">contact me</div>
-      </section>
+      <Footer additionalStyles="block md:hidden mt-4 pb-4" />
     </div>
   );
 };

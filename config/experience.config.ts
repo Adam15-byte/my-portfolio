@@ -16,6 +16,7 @@ export const previousJobs: IPreviousJob[] = [
       "materialui",
       "ant-design",
       "hook-form",
+      "Azure DevOps",
     ],
     startDate: new Date("2022/08/01"),
     endDate: new Date(),

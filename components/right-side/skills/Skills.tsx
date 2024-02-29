@@ -35,7 +35,7 @@ const Skills = () => {
 
   return (
     <div
-      className="h-full w-full gap-4 grid place-content-stretch grid-auto-rows grid-cols-3 sm:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6"
+      className="h-fit w-full gap-4 grid place-content-stretch grid-auto-rows grid-cols-3 sm:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6"
       onMouseMove={handleMouseMove}
     >
       {Object.entries(SkillsConfig).map(([key, src], index) => {
@@ -47,7 +47,7 @@ const Skills = () => {
             <Tooltip>
               <TooltipTrigger className="cursor-default">
                 <div
-                  className="bg-slate-200 dark:bg-slate-700 rounded-md p-2 md:p-4 flex gap-4 justify-center items-center justify-self-stretch h-full grow relative"
+                  className="bg-slate-200 min-h-[100px] md:mih-h-[150px] dark:bg-slate-700 rounded-md p-2 md:p-4 flex gap-4 justify-center items-center justify-self-stretch h-full grow relative"
                   ref={handleSkillRef(index)}
                 >
                   <div

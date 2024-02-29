@@ -19,6 +19,7 @@ export const SkillsConfig = {
   "hook form": "/tech/hook-form.png",
   dayjs: "/tech/dayjs.png",
   git: "/tech/git.png",
+  "Azure DevOps": "/tech/azure-devops.png",
   "github copilot": "/tech/copilot.png",
   "chat gpt": "/tech/chat-gpt.png",
 };
