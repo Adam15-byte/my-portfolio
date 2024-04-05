@@ -4,7 +4,7 @@ export const aboutConfig = [
   {
     title: "Quippy, Creative, and Passionate",
     description:
-      "As a developer, I specialize in creating TypeScript applications, primarily focusing on frontend development. I thrive on finding solutions to the challenges I encounter and strive to elevate the projects I'm involved in. Additionally, I endeavor to foster an energetic and uplifting atmosphere within the teams I collaborate with.",
+      "As a developer, I specialize in creating robust applications, primarily focusing on frontend solutions. I thrive on finding solutions to the challenges I encounter and strive to elevate the projects I'm involved in. Additionally, I endeavor to foster an energetic and uplifting atmosphere within the teams I collaborate with.",
     icon: <User size={40} strokeWidth={2.5} />,
     underlineStyle: "chonky-underline",
   },

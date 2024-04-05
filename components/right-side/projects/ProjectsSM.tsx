@@ -73,19 +73,19 @@ const ProjectsSM = () => {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   style={{ backgroundImage: `url(${project.bgImage})` }}
-                  className="group min-h-[150px] p-4 w-[100%] flex-1 hover:flex-2 border-2 hover:border-4 flex justify-center items-end bg-cover bg-center bg-no-repeat rounded-md"
+                  className="group min-h-[150px] p-4 w-[100%] flex-2 border-2 flex justify-center items-end bg-cover bg-center bg-no-repeat rounded-md"
                 >
-                  <div className="group-hover:w-full transition-all duration-500 px-6 py-4 bg-black bg-opacity-40 group-hover:bg-opacity-90 rounded-xl flex flex-col gap-2">
+                  <div className="w-full transition-all duration-500 px-6 py-4 bg-black bg-opacity-40 group-hover:bg-opacity-90 rounded-xl flex flex-col gap-2">
                     <h3 className="text-xl xl:text-2xl text-left font-bold tracking-wide lg:tracking-wider text-white">
                       {project.name}
                     </h3>
-                    <div className="gap-2 my-2 hidden group-hover:flex flex-wrap">
+                    <div className="gap-2 my-2 flex flex-wrap">
                       {project.stack.map((tech, stackIndex) => {
                         return (
                           <div
                             key={stackIndex}
                             className={
-                              "p-1 bg-white bg-opacity-20 rounded-lg hidden invisible group-hover:flex group-hover:visible items-center justify-center transition-all duration-200"
+                              "p-1 bg-white bg-opacity-20 rounded-lg flex visible items-center justify-center transition-all duration-200"
                             }
                           >
                             <Image
@@ -99,11 +99,11 @@ const ProjectsSM = () => {
                         );
                       })}
                     </div>
-                    <div className="gap-2 my-2 hidden group-hover:flex flex-wrap">
+                    <div className="gap-2 my-2 flex flex-wrap">
                       {project.github && (
                         <Link
                           href={project.github}
-                          className="p-1 bg-white bg-opacity-20 rounded-lg items-center justify-center cursor-pointer hidden group-hover:flex"
+                          className="p-1 bg-white bg-opacity-20 rounded-lg items-center justify-center cursor-pointer flex"
                         >
                           <Github size={32} />
                         </Link>
@@ -111,7 +111,7 @@ const ProjectsSM = () => {
                       {project.address && (
                         <Link
                           href={project.address}
-                          className="p-1 bg-white bg-opacity-20 rounded-lg items-center justify-center cursor-pointer hidden group-hover:flex"
+                          className="p-1 bg-white bg-opacity-20 rounded-lg items-center justify-center cursor-pointer flex"
                         >
                           <ExternalLink size={32} />
                         </Link>
